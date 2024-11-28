@@ -1,0 +1,16 @@
+Regras para for e listas
+
+for variavel in iteravel:
+    codigo
+    codigo
+
+exemplo
+word = "string"
+list_words = []
+for w in word:
+    list_words.append(w)
+    
+
+
+while True:
+    codigo
