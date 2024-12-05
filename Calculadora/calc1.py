@@ -1,6 +1,8 @@
 # Calculadora Simples com Funções
 # executart o prog => PS C:\Users\user\Downloads\Computer_Vision_Py\Calculadora> python .\calc1.py OU python calc1.py
 
+
+#Define funções individuais para cada operação.
 def add(x, y):
     return x + y
 
