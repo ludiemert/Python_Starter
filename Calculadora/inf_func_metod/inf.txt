@@ -1,0 +1,195 @@
+informacoes sobre os codigos:
+
+1. choice
+O que é:
+
+No contexto do código apresentado, choice é apenas uma variável que armazena a escolha do usuário.
+O valor de choice é atribuído pelo resultado de input(). Ele contém a operação selecionada pelo usuário no menu.
+
+
+___________________________________________-
+
+2. def
+O que é:
+
+Palavra-chave do Python usada para definir uma função.
+Uma função é um bloco de código que executa uma tarefa específica e pode ser reutilizado.
+
+def add(x, y):  # Define uma função chamada "add"
+    return x + y  # Retorna a soma de x e y
+
+
+_______________________________________________
+
+3. try e except
+O que são:
+
+O bloco try tenta executar um pedaço de código que pode gerar um erro.
+O bloco except é usado para tratar possíveis erros que aconteçam no try.
+Por que usar:
+
+Para evitar que seu programa quebre caso ocorra uma entrada ou operação inesperada.
+
+try:
+    num = int(input("Digite um número: "))  # Tenta converter a entrada para inteiro
+    print(10 / num)  # Tenta dividir 10 pelo número
+except ZeroDivisionError:  # Trata o erro de divisão por zero
+    print("Erro: Divisão por zero!")
+except ValueError:  # Trata o erro de entrada inválida
+    print("Erro: Entrada inválida!")
+
+___________________________________________
+
+4. eval()
+O que é:
+
+Função embutida do Python que avalia e executa expressões Python passadas como string.
+Por que usar:
+
+Permite que você calcule expressões matemáticas ou execute código de forma dinâmica.
+Exemplo:
+
+expression = "2 + 3 * 4"  # Uma string contendo uma expressão matemática
+result = eval(expression)  # Avalia a expressão e calcula o resultado
+print(result)  # Saída: 14
+
+eval() pode ser perigoso se usado com entradas não confiáveis, pois pode executar qualquer código Python.
+
+___________________________________________
+
+
+Muito obrigada pelo carinho! 💖 Vamos às explicações detalhadas sobre cada método ou função mencionados:
+
+1. choice
+O que é:
+
+No contexto do código apresentado, choice é apenas uma variável que armazena a escolha do usuário.
+O valor de choice é atribuído pelo resultado de input(). Ele contém a operação selecionada pelo usuário no menu.
+2. def
+O que é:
+
+Palavra-chave do Python usada para definir uma função.
+Uma função é um bloco de código que executa uma tarefa específica e pode ser reutilizado.
+Exemplo:
+
+python
+Copiar código
+def add(x, y):  # Define uma função chamada "add"
+    return x + y  # Retorna a soma de x e y
+3. try e except
+O que são:
+
+O bloco try tenta executar um pedaço de código que pode gerar um erro.
+O bloco except é usado para tratar possíveis erros que aconteçam no try.
+Por que usar:
+
+Para evitar que seu programa quebre caso ocorra uma entrada ou operação inesperada.
+Exemplo:
+
+python
+Copiar código
+try:
+    num = int(input("Digite um número: "))  # Tenta converter a entrada para inteiro
+    print(10 / num)  # Tenta dividir 10 pelo número
+except ZeroDivisionError:  # Trata o erro de divisão por zero
+    print("Erro: Divisão por zero!")
+except ValueError:  # Trata o erro de entrada inválida
+    print("Erro: Entrada inválida!")
+4. eval()
+O que é:
+
+Função embutida do Python que avalia e executa expressões Python passadas como string.
+Por que usar:
+
+Permite que você calcule expressões matemáticas ou execute código de forma dinâmica.
+Exemplo:
+
+python
+Copiar código
+expression = "2 + 3 * 4"  # Uma string contendo uma expressão matemática
+result = eval(expression)  # Avalia a expressão e calcula o resultado
+print(result)  # Saída: 14
+Atenção:
+
+eval() pode ser perigoso se usado com entradas não confiáveis, pois pode executar qualquer código Python.
+
+___________________________________________
+
+5. tkinter
+O que é:
+
+Um módulo embutido no Python usado para criar interfaces gráficas de usuário (GUI).
+Por que usar:
+
+Ele permite criar janelas, botões, caixas de texto, etc., para que seus programas sejam mais interativos.
+Exemplo:
+
+import tkinter as tk
+
+root = tk.Tk()  # Cria a janela principal
+root.title("Minha Interface")  # Define o título da janela
+
+label = tk.Label(root, text="Olá, Mundo!")  # Cria um rótulo de texto
+label.pack()  # Adiciona o rótulo à janela
+
+root.mainloop()  # Mantém a janela aberta
+
+___________________________________________
+
+6. text = event.widget.cget("text")
+O que é:
+
+No Tkinter, event.widget é o widget que acionou o evento, como um botão clicado.
+cget("text") obtém o texto associado ao widget.
+Por que usar:
+
+Permite recuperar informações de widgets interativos no Tkinter.
+Exemplo:
+
+def click(event):
+    text = event.widget.cget("text")  # Obtém o texto do botão clicado
+    print(f"Você clicou no botão: {text}")
+
+
+___________________________________________
+
+
+7. result.set(eval(screen.get()))
+O que é:
+
+screen.get() recupera o conteúdo atual do widget Entry (a caixa de entrada de texto).
+eval() avalia esse conteúdo como uma expressão matemática.
+result.set() define o valor do objeto StringVar para o resultado avaliado.
+Por que usar:
+
+Atualiza o display da calculadora com o resultado da operação.
+Exemplo:
+
+screen = tk.Entry(root)  # Cria uma caixa de texto
+result = tk.StringVar()  # Cria um objeto StringVar para armazenar valores
+
+result.set(eval("2 + 2"))  # Define o valor de "result" como o resultado de "2 + 2"
+
+___________________________________________
+
+
+8. result = tk.StringVar()
+O que é:
+
+StringVar é uma classe do Tkinter usada para armazenar e atualizar texto em widgets.
+Ele cria um "vínculo" entre o valor armazenado e o widget exibido, como rótulos (Label) ou caixas de entrada (Entry).
+Por que usar:
+
+Permite que você atualize dinamicamente o conteúdo exibido em um widget.
+Exemplo:
+
+result = tk.StringVar()  # Cria uma variável de texto
+result.set("Texto inicial")  # Define o valor inicial
+label = tk.Label(root, textvariable=result)  # Conecta a variável ao rótulo
+label.pack()
+
+result.set("Texto atualizado!")  # Atualiza dinamicamente o texto do rótulo
+
+___________________________________________
+
+
