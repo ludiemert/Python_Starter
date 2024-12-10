@@ -1,5 +1,5 @@
-from flask import Flask, jsonify, request
-from flask_cors import CORS
+from flask import Flask, jsonify, request # Framework para criar APIs
+from flask_cors import CORS # Permite que o frontend faça requisições à API, CORS é essencial em aplicações web para evitar bloqueios de requisições por domínios diferentes.
 from datetime import datetime
 
 app = Flask(__name__)
@@ -11,17 +11,22 @@ carros = [
     {"id": 2, "nome": "Chevrolet Spin", "preco": 150},
     {"id": 3, "nome": "Hyundai HB20", "preco": 85},
     {"id": 4, "nome": "Hyundai Tucson", "preco": 120},
-    {"id": 5, "nome": "Fiat Uno", "preco": 60},
-    {"id": 6, "nome": "Fiat Mobi", "preco": 100},
-    {"id": 7, "nome": "Fiat Pulse", "preco": 130}
+    {"id": 5, "nome": "Fiat Uno", "preco": 60}
 ]
 
-alugados = []
+alugados = [] #será preenchido ao longo do uso.
+#Simula um banco de dados simples em memória.
 
+
+# Rotas da API
+
+# Listar carros, Retorna os dados de carros disponíveis e alugados.
 @app.route('/api/carros', methods=['GET'])
 def listar_carros():
     return jsonify({"carros": carros, "alugados": alugados})
 
+# Alugar carro, Calcula o preço total baseado nos dias.
+# Remove o carro da lista de disponíveis e o adiciona na de alugados. Atualiza dinamicamente os estados no backend.
 @app.route('/api/alugar', methods=['POST'])
 def alugar_carro():
     data = request.json
@@ -47,20 +52,23 @@ def alugar_carro():
     alugados.append(carro)
     carros.remove(carro)
 
-    return jsonify({'message': 'Carro alugado com sucesso!'})
+    return jsonify({'message': 'Car successfully rented!'})
 
+# Devolver carro
 @app.route('/api/devolver', methods=['POST'])
-def devolver_carro():
+def devolver_carro(): # Remove o carro de "alugados" e o adiciona em "carros".
     data = request.json
     carro_id = data.get("id")
 
     for carro in alugados:
         if carro["id"] == carro_id:
             alugados.remove(carro)
-            carros.append(carro)
-            return jsonify({"message": "Carro devolvido com sucesso!"}), 200
+            carros.append(carro) # # Remove o carro de "alugados" e o adiciona em "carros".
+            return jsonify({"message": "Car successfully returned!"}), 200
 
-    return jsonify({"message": "Carro não encontrado!"}), 404
+    return jsonify({"message": "Car not found!"}), 404
 
+#Roda o servidor localmente.
+# Modo debug facilita encontrar erros durante o desenvolvimento.
 if __name__ == '__main__':
     app.run(debug=True)
