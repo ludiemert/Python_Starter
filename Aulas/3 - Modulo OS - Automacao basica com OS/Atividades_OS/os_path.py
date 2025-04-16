@@ -33,14 +33,24 @@ curr_dir = os.getcwd() # variavel
 os.path.getatime(curr_dir) #tempo da ultima modificacao
 
 # %%
-# transformando isso na hora de hoje
+# transformando isso na hora de hoje,
 curr_dir = os.getcwd() # variavel
-lt = os.path.getatime(curr_dir) #tempo da ultima modificacao
+lt = os.path.getatime(curr_dir) #tempo da ultima modificacao, segundo
 
-from datetime import datetime
+from datetime import datetime # data
 datetime.utcfromtimestamp(lt)
 # resposta datetime.datetime(2025, 4, 16, 20, 59, 21, 598870)
 
 
+# %%
+# perguntar se eh arquivo ou pasta
+os.path.isfile(curr_dir) # eh arquivo?
+# False
+
+
+# %%
+# perguntar se eh diretorio
+os.path.isdir(curr_dir)
+#True
 
 # %%
