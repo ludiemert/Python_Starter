@@ -17,3 +17,30 @@ os.path.join(os.getcwd(), 'pasta')
 # retorna apensa a utima pasta do caminho
 os.path.basename(os.getcwd()) # seria a pasta OS  - 'Atividades_OS'
 # %%
+# quebrar a string grande em lista []
+os.getcwd().split('/')[-1] # pega a ultima da lista [1]
+
+# %%
+# vai quebrar em tupla
+os.path.split(os.getcwd())[0]
+
+# %%
+# vai retornar tudo que vem antes da pasta
+os.path.dirname(os.getcwd())
+
+# %%
+curr_dir = os.getcwd() # variavel
+os.path.getatime(curr_dir) #tempo da ultima modificacao
+
+# %%
+# transformando isso na hora de hoje
+curr_dir = os.getcwd() # variavel
+lt = os.path.getatime(curr_dir) #tempo da ultima modificacao
+
+from datetime import datetime
+datetime.utcfromtimestamp(lt)
+# resposta datetime.datetime(2025, 4, 16, 20, 59, 21, 598870)
+
+
+
+# %%
