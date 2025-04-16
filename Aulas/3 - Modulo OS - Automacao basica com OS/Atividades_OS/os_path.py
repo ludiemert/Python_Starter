@@ -9,4 +9,11 @@ os.getcwd()
 #'c:\\Users\\user\\Downloads\\Computer_Vision_Py\\Aulas\\3 - Modulo OS - Automacao basica com OS\\Atividades_OS'
 
 # %%
-os.path.
+#metotho join mescla informacoes
+os.path.join(os.getcwd(), 'pasta')
+# os.getcwd() + '/pasta' eh igual o comando
+
+#%%
+# retorna apensa a utima pasta do caminho
+os.path.basename(os.getcwd()) # seria a pasta OS  - 'Atividades_OS'
+# %%
