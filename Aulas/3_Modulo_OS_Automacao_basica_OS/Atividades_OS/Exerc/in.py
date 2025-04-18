@@ -21,11 +21,12 @@ files_list = [i for i in full_list if os.path.isfile(i) and not i.endswith(('.py
 
 # %%
 # preciso saber os tipos na lista final, pegando somente a extensao
-types = set([i.split('.')[1] for i in files_list])
+types = list(set([i.split('.')[1] for i in files_list]))
 # essa logica types = [i for i in files_list]
 #'teste09.docx'.split('.')[1]  #'docx' pega o segundo elemento
 #'teste09.docx'.split('.')  # ['teste09', 'docx']
-# comando set vai aparecer a extensao uma unica vez
+# comando set vai aparecer a extensao uma unica vez => types:  {'xlsx', 'txt', 'yml', 'png', 'docx'}
+# converter para list => types = list(set([i.split('.')[1] for i in files_list]))
 print("types: ", types)
 
 
