@@ -26,8 +26,15 @@ types = list(set([i.split('.')[1] for i in files_list]))
 #'teste09.docx'.split('.')[1]  #'docx' pega o segundo elemento
 #'teste09.docx'.split('.')  # ['teste09', 'docx']
 # comando set vai aparecer a extensao uma unica vez => types:  {'xlsx', 'txt', 'yml', 'png', 'docx'}
-# converter para list => types = list(set([i.split('.')[1] for i in files_list]))
+# converter para list => types = list(set([i.split('.')[1] for i in files_list])) => types:  ['xlsx', 'txt', 'yml', 'png', 'docx']
 print("types: ", types)
+
+# %%
+# para cada typo de arquivo criar uma pasta
+types = ['.py', '.txt', '.zip']
+for file_type in types:
+    folder = file_type.replace('.', '')  # cria 'py', 'txt', 'zip'
+    os.makedirs(folder, exist_ok=True)
 
 
 # %%
