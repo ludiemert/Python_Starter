@@ -1,4 +1,5 @@
 # criar um script para colocar todos os arquivos em pasta ordenadas em pastas
+# e deixar as extenssao py e ipynb fora das pastas e deixar cada extensao em sua pasta
 
 import os
 
@@ -20,10 +21,11 @@ files_list = [i for i in full_list if os.path.isfile(i) and not i.endswith(('.py
 
 # %%
 # preciso saber os tipos na lista final, pegando somente a extensao
-types = [i.split('.')[1] for i in files_list]
+types = set([i.split('.')[1] for i in files_list])
 # essa logica types = [i for i in files_list]
 #'teste09.docx'.split('.')[1]  #'docx' pega o segundo elemento
 #'teste09.docx'.split('.')  # ['teste09', 'docx']
+# comando set vai aparecer a extensao uma unica vez
 print("types: ", types)
 
 
