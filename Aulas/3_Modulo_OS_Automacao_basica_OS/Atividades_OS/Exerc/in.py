@@ -1,40 +1,58 @@
-# criar um script para colocar todos os arquivos em pasta ordenadas em pastas
-# e deixar as extenssao py e ipynb fora das pastas e deixar cada extensao em sua pasta
-
-import os
+# Criar um script para colocar todos os arquivos em pastas organizadas por extensão
+# Arquivos .py e .ipynb devem ficar fora das pastas
 
 # %%
-cwd = os.getcwd()  # obtém o diretório atual
-print("Diretório atual:", cwd)  # exibe o diretório atual
+import os       # Módulo para interagir com o sistema de arquivos
+import shutil   # Módulo para mover arquivos de forma segura
 
-# %%
-# full lista (full_list variavel) de todos arquivos dentro dessa pasta
+# 1. Obtém o caminho do diretório atual (onde o script está sendo executado)
+cwd = os.getcwd()
+print("📁 Diretório atual:", cwd)
+
+# 2. Lista tudo (arquivos e pastas) dentro do diretório atual
 full_list = os.listdir(cwd)
-print("Full List file:", full_list)
-# %%
-# tb separar os arq py, usando copreesao em lista
-# que seja somente arquivos e que os arquivos .py nao esteja presente nessa string de codigo
-# se tem substring dentro dela '.py' not in i => 'text' in 'teste' # False porque nao esta dentro de text, USANDO TUPLE  and not i.endswith(('.py', '.ipynb'))]
-# se fosse so file py o comando seria: files_list = [i for i in full_list if os.path.isfile(i) and '.py' not in i]
-files_list = [i for i in full_list if os.path.isfile(i) and not i.endswith(('.py', '.ipynb'))]
-#print("files_list: ", files_list)
+print("📄 Lista completa de arquivos e pastas:", full_list)
 
-# %%
-# preciso saber os tipos na lista final, pegando somente a extensao
-types = list(set([i.split('.')[1] for i in files_list]))
-# essa logica types = [i for i in files_list]
-#'teste09.docx'.split('.')[1]  #'docx' pega o segundo elemento
-#'teste09.docx'.split('.')  # ['teste09', 'docx']
-# comando set vai aparecer a extensao uma unica vez => types:  {'xlsx', 'txt', 'yml', 'png', 'docx'}
-# converter para list => types = list(set([i.split('.')[1] for i in files_list])) => types:  ['xlsx', 'txt', 'yml', 'png', 'docx']
-print("types: ", types)
+# 3. Filtra somente os arquivos (ignora pastas), e exclui os arquivos .py e .ipynb
+files_list = [
+    file for file in full_list
+    if os.path.isfile(file) and not file.endswith(('.py', '.ipynb'))
+]
+print("📃 Arquivos que serão movidos:", files_list)
 
-# %%
-# para cada typo de arquivo criar uma pasta
-types = ['.py', '.txt', '.zip']
+# 4. Coleta todos os tipos de extensões diferentes encontradas nos arquivos
+types = list(set([
+    file.rsplit('.', 1)[-1]  # Pega a última parte após o ponto (ex: 'txt')
+    for file in files_list if '.' in file
+]))
+print("📂 Tipos de extensões encontradas:", types)
+
+# 5. Cria uma pasta para cada tipo de extensão encontrada (se ainda não existir)
 for file_type in types:
-    folder = file_type.replace('.', '')  # cria 'py', 'txt', 'zip'
-    os.makedirs(folder, exist_ok=True)
+    folder_path = os.path.join(cwd, file_type)  # Caminho: .../txt, .../png, etc.
+    os.makedirs(folder_path, exist_ok=True)     # Cria pasta se não existir
+    print(f"📁 Pasta criada (ou já existia): {folder_path}")
 
+# 6. Move os arquivos para suas respectivas pastas com base na extensão
+for file in files_list:
+    from_path = os.path.join(cwd, file)  # Caminho original do arquivo
+
+    # Garante que o arquivo tem extensão
+    if '.' in file:
+        ext = file.rsplit('.', 1)[-1]  # Pega a extensão do arquivo
+    else:
+        ext = 'sem_extensao'           # Se não tiver extensão, usa essa pasta
+
+    to_path = os.path.join(cwd, ext, file)  # Caminho de destino
+
+    try:
+        shutil.move(from_path, to_path)     # Move o arquivo para a pasta
+        print(f"✅ Arquivo movido: {file} → {ext}/")
+    except FileNotFoundError:
+        # Caso o arquivo já tenha sido movido ou apagado
+        print(f"❌ Arquivo não encontrado (talvez já foi movido): {file}")
+    except Exception as e:
+        # Outro erro qualquer
+        print(f"❌ Erro ao mover '{file}': {e}")
 
 # %%
