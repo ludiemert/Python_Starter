@@ -340,7 +340,8 @@ ________________________________________
 
 🛠 Full-Stack Developer <br>
 🖥️ Python | Computer Vision | AI Integrations <br>
-📍 São Jose dos Campos – SP, Brazil
+📍 51 Great William O'Brien St, Blackpool, T23 R2RV,  Cork - Irland 
+☎ +353 87 243 8690
 
 <a href="https://www.linkedin.com/in/lucianadiemert" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn Badge" height="25"></a>&nbsp;
 <a href="mailto:lucianadiemert@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white" alt="Gmail Badge" height="25"></a>&nbsp;
