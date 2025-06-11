@@ -16,7 +16,62 @@ My projects from the **Python Starter** course at Asimov Academy. I learned prog
 
 --------
 
-### Tabela de Módulos Estudados:
+### img projects:
+
+## Screenshots
+
+Here are some images showing the layout of the application:
+
+________________________________________
+
+<h4 align="center">Chat_friends 🥰 🚀</h4>
+
+<div align="center">
+    <table>
+        <tr>
+            <td style="width: 50%; text-align: center;">
+                <img src="img_github/2_jogo_velha_proj8.png" style="width: 90%;" alt="2_jogo_velha_proj8">
+                <p style="margin-top: 5px;">2_jogo_velha_proj8</p>
+            </td>
+            <td style="width: 50%; text-align: center;">
+                <img src="img_github/Proj_03_loc_Car.png" style="width: 90%;" alt="Proj_03_loc_Car">
+                <p style="margin-top: 5px;">Proj_03_loc_Car</p>
+            </td>
+        </tr>
+    </table>
+</div>
+
+  <br/>
+  <br/>
+
+
+________________________________________
+
+<div align="center">
+    <table>
+        <tr>
+             <td style="width: 50%; text-align: center;">
+                <img src="img_github/2_jogo_velha_proj8.png" style="width: 90%;" alt="2_jogo_velha_proj8">
+                <p style="margin-top: 5px;">2_jogo_velha_proj8</p>
+            </td>
+            <td style="width: 50%; text-align: center;">
+                <img src="img_github/Proj_7_simulando_caos_academia.png" style="width: 90%;" alt="Proj_7_simulando_caos_academia">
+                <p style="margin-top: 5px;">Proj_7_simulando_caos_academia</p>
+            </td>
+        </tr>
+    </table>
+</div>
+
+  <br/>
+  <br/>
+
+
+  ________________________________________
+
+
+
+
+### Table of Modules Studied:
 | Module | Topics Covered |
 |--------|----------------|
 | **Language Fundamentals** | Strings, built-in methods, data types |
@@ -27,7 +82,7 @@ My projects from the **Python Starter** course at Asimov Academy. I learned prog
 
 --------
 
-### Tabela de Projetos Desenvolvidos:
+### Table of Developed Projects:
 
 | Project | Description | Technologies | Status |
 |---------|-------------|--------------|--------|
@@ -42,7 +97,7 @@ My projects from the **Python Starter** course at Asimov Academy. I learned prog
 
 --------
 
-### Tabela de Estrutura de Diretórios:
+### Directory Structure Table:
 
 | Directory | Content Type | Example Files |
 |-----------|-------------|---------------|
@@ -54,7 +109,7 @@ My projects from the **Python Starter** course at Asimov Academy. I learned prog
 
 --------
 
-### Tabela de Cronograma de Aprendizado:
+### Learning Timeline Table:
 
 | Week | Topics | Projects |
 |------|--------|----------|
@@ -67,7 +122,7 @@ My projects from the **Python Starter** course at Asimov Academy. I learned prog
 | **7** | Project integration | Academic System, Gym App |
 
 --------
-### Tabela de Tecnologias Utilizadas:
+### Table of Technologies Used:
 
 | Technology | Purpose | Proficiency Level |
 |------------|---------|-------------------|
