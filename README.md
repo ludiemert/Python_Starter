@@ -1,6 +1,90 @@
-### Computer_Vision_Py
-Mastering automated image and video interpretation and analysis using computer vision with Python. Image and video interpretation is applicable in a variety of areas, such as medical image processing, industrial automation, autonomous vehicles, pattern recognition and much more. Many real-world problems involve visual data.
+### English 💌
 
+# 🐍 Python Starter Course - Asimov Academy
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+My projects from the **Python Starter** course at Asimov Academy. I learned programming from beginning to expert level.
+
+```diff
++ Why this course is good:
+- Easy lessons with practice
+- Teachers explain very clearly
+- Many exercises to learn
+- Help when you have questions
+```
+
+--------
+
+### Tabela de Módulos Estudados:
+| Module | Topics Covered |
+|--------|----------------|
+| **Language Fundamentals** | Strings, built-in methods, data types |
+| **Operators and Logic** | Comparison operators, boolean logic, operator chaining |
+| **OS Module** | File system automation, directory management |
+| **Object-Oriented Programming** | Classes, objects, inheritance, polymorphism |
+| **Practical Exercises** | Hands-on coding challenges, solution walkthroughs |
+
+--------
+
+### Tabela de Projetos Desenvolvidos:
+
+| Project | Description | Technologies | Status |
+|---------|-------------|--------------|--------|
+| **Tic-Tac-Toe** | Classic 3x3 grid game with player vs computer | Python | ✅ Complete |
+| **Calculator** | Command-line calculator with basic operations | Python | ✅ Complete |
+| **Academic System** | Student/course management system | Python | ✅ Complete |
+| **Car Rental** | Vehicle rental management with database | Python, SQLite | ✅ Complete |
+| **Gym App** | Fitness center management system | Python | ✅ Complete |
+| **Python Wiki** | Knowledge base of Python concepts | Python, Markdown | ✅ Complete |
+| **Terminal Race** | Text-based racing game with simple AI | Python | ✅ Complete |
+
+
+--------
+
+### Tabela de Estrutura de Diretórios:
+
+| Directory | Content Type | Example Files |
+|-----------|-------------|---------------|
+| **Projects/** | Practical applications | `Tic_Tac_Toe/`, `Car_Rental/` |
+| **Modules/** | Learning materials | `Fundamentals/`, `OOP/` |
+| **Exercises/** | Practice solutions | `String_Methods/`, `Operators/` |
+| **Assets/** | Supplementary files | `screenshots/`, `diagrams/` |
+| **Docs/** | Documentation | `setup_guide.md`, `api_reference.md` |
+
+--------
+
+### Tabela de Cronograma de Aprendizado:
+
+| Week | Topics | Projects |
+|------|--------|----------|
+| **1** | Basic syntax, variables, strings | Calculator |
+| **2** | Operators, control flow, logic | Tic-Tac-Toe |
+| **3** | Functions, error handling | Python Wiki |
+| **4** | File I/O, OS automation | - |
+| **5** | OOP fundamentals | Terminal Race |
+| **6** | Advanced OOP, databases | Car Rental |
+| **7** | Project integration | Academic System, Gym App |
+
+--------
+### Tabela de Tecnologias Utilizadas:
+
+| Technology | Purpose | Proficiency Level |
+|------------|---------|-------------------|
+| Python 3.10 | Core programming language | ⭐⭐⭐⭐⭐ |
+| SQLite | Database for projects | ⭐⭐⭐⭐⭐ |
+| Markdown | Documentation | ⭐⭐⭐⭐⭐|
+| Git | Version control | ⭐⭐⭐⭐⭐ |
+| Pytest | Testing framework | ⭐⭐⭐⭐⭐|
+| PyInstaller | Executable creation | ⭐⭐⭐⭐⭐ |
+
+
+
+
+
+--------
+
+### Portugues💌
 
 ### 🐍 Curso Python Starter - Asimov Academy
 
